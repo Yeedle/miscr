@@ -11,6 +11,7 @@ is_not_in <- function(...) {
   !magrittr::is_in(...)
 }
 
+#' @export
 `%not_in%` <- is_not_in
 
 is_not_na <- function(...) {
