@@ -8,7 +8,18 @@ To install, use `devtools`.
 devtools::install_github("miscr")
 ```
 
-# Logical `not` functions
+## `tibble` trouble
+
+`tibble` is a wonderful package, but not all use cases are covered. What if you want to select a particular column as a vector? Sure you can use base r for that, but isn't a pipe idiom nicer?   
+```r
+iris %>% deframe("Species")
+
+mtcars %>% select(cyl) %>% deframe()
+```
+
+
+
+## Logical `not` functions
 Often, we're intersted in the logical complement of a function. For example, we want to know whether a variable is *not* `NA`. The group of `is_not` functions serve this purpose.
 
 ```r
